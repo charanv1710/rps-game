@@ -1,0 +1,109 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: 
+        radial-gradient(circle at center, rgba(255, 126, 95, 0.9), rgba(255, 126, 95, 0.7), rgba(255, 95, 71, 0.6)),
+        url('https://www.transparenttextures.com/patterns/asfalt.png'); /* Add texture */
+    background-size: cover; /* Make texture cover the background */
+    margin: 0;
+    color: #fff;
+    transition: background-color 1s ease;
+}
+
+#homePage, #gamePage {
+    text-align: center;
+    position: relative; /* For layering */
+    z-index: 1; /* Ensure content is above background */
+}
+
+h1 {
+    font-size: 3.5rem;
+    margin: 20px;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+}
+
+button {
+    padding: 10px 25px;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #ff6f61; /* Coral color */
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+button:hover {
+    background-color: #ff3b30; /* Darker coral */
+    transform: scale(1.05);
+}
+
+.score-board {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    margin: 20px 0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.badge {
+    font-size: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 5px 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.choices {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 20px 0;
+}
+
+.choice {
+    width: 120px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.choice:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+}
+
+#result {
+    font-size: 2.5rem;
+    margin: 20px 0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+@media (max-width: 600px) {
+    .choice {
+        width: 80px;
+    }
+    
+    button {
+        font-size: 1.2rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .score-board {
+        font-size: 2rem;
+    }
+
+    #result {
+        font-size: 2rem;
+    }
+}
